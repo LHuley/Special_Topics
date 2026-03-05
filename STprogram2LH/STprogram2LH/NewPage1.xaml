@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="STprogram2LH.NewPage1"
+             BackgroundColor="{StaticResource PrimaryBackground}"
+             Title="NewPage1">
+    <ScrollView>
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+            Source="leopold.jpg"
+            HeightRequest="400"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Aspect="AspectFit"
+            SemanticProperties.Description="A image of Leopold's Ice Cream" />
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1"  Spacing="10" Padding="5" >
+                <Label 
+                Text="Leopold's Ice Cream"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold" />
+                <Button 
+                Text="Double Click To Learn More" 
+                Clicked="OnActionButtonClicked"
+                Margin="125"
+                BackgroundColor="#034F07"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            </VerticalStackLayout>
+            <Image
+            Source="skillet.jpg"
+            WidthRequest="200" 
+            HeightRequest="200"
+            Grid.Row="1" 
+            Grid.Column="0"
+            Aspect="AspectFill"
+            SemanticProperties.Description="A image of Silver Skillet" />
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="10" Padding="5" >
+                <Label 
+                Text="Silver Skillet"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold" />
+                <Button 
+                Text="Double Click To Learn More" 
+                Clicked="OnActionButtonClicked1"
+                Margin="125"
+                BackgroundColor="#034F07"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            </VerticalStackLayout>
+            <Image
+            Source="mercier.jpg"
+            Grid.Row="2" 
+            Grid.Column="0"
+            Aspect="AspectFill"
+            SemanticProperties.Description="A image of Mercier Orchards" />
+            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Spacing="10" Padding="5" >
+                <Label 
+                Text="Mercier Orchards"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold" />
+                <Button 
+                Text="Double Click To Learn More" 
+                Clicked="OnActionButtonClicked2"
+                Margin="125"
+                BackgroundColor="#034F07"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            </VerticalStackLayout>
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="0"
+                x:Name="TourBtn"
+                Text="Tourist Attractions" 
+                Clicked="GoToTourPage"
+                BackgroundColor="#034F07"
+                HorizontalOptions="Fill" />
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="1"
+                x:Name="CloseBtn"
+                Text="Back" 
+                Clicked="OnGoToFirstpage"
+                BackgroundColor="#034F07"
+                HorizontalOptions="Fill" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

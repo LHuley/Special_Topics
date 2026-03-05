@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampusProfileHuley.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout BackgroundColor="#F0D57A">
+        <Label 
+            Text="Student Profile"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image
+            Source="mascot.jpg"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Image of a college mascot" />
+
+        <Label
+            Text="Name: Emmet Smith"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level1" />
+
+        <Label
+            Text="Major: Biology"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level1" />
+
+        <Label
+            Text="Graduation Date: 2028"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level1" />
+
+        <Button
+            x:Name="CheerBtn"
+            Text="Cheer" 
+            SemanticProperties.Hint="Cheers on the student"
+            BackgroundColor="#BF2506"
+            Clicked="OnCheerClicked"
+            HorizontalOptions="Fill" />
+        
+        <Button
+            x:Name="BackBtn"
+            Text="Back" 
+            SemanticProperties.Hint="Transitions back to the first page"
+            BackgroundColor="#BF2506"
+            Clicked="BackOnClicked"
+            HorizontalOptions="Fill" />
+        
+        
+        
+
+    </VerticalStackLayout>
+</ContentPage>

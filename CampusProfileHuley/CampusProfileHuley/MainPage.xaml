@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CampusProfileHuley.MainPage"
+             Title="MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="#F0D57A">
+            <Label
+                Text="Welcome To Paddington University"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Image
+                Source="campus.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Image of a college campus" />
+
+            <Label
+                Text="Our Campus is fitted with vibrant brick paths that connects all main buildings of interest."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="TipBtn"
+                Text="Show Tip" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                BackgroundColor="#BF2506"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="NextBtn"
+                Text="Go To Profile" 
+                BackgroundColor="#BF2506"
+                Clicked="NextOnClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
